@@ -1,0 +1,51 @@
+* {margin: 0; padding: 0;}
+
+.page-header {
+    font-size: 15px;
+}
+
+.num-form {
+	width: 400px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+
+.num-form input{
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+.plotly-graph-div {
+    padding: 15px;
+    height: 50px;
+    width: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin-bottom: -142px;
+}
+
+body:after {
+    display: block;
+}
+
+.page-footer, body:after {
+  height: 142px;
+}
+
+.page-footer {
+    background:#999;
+}
+
+.page-footer p {
+    font-size: 20px;
+    text-align: center;
+}
+

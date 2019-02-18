@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form name = "form" action = "{% url 'overview' %}" method = "POST" class="num-form">
+    {% csrf_token %}
+
+         <div>
+            <center>
+                <p>Fill in comma separated numbers: </p>
+               <input type = "text" name = "nums" class = "nums-input"/>
+            </center>
+         </div>
+
+         <br>
+
+         <div class="num-button">
+            <center>
+
+               <button type = "submit">
+                  <strong>Calculate</strong>
+               </button>
+
+            </center>
+         </div>
+
+      </form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Max</th>
+            <th>Sum</th>
+            <th>Mean</th>
+            <th>Variance</th>
+            <th>Standard deviation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>{{ max_nums }}</th>
+            <th>{{ sum_nums }}</th>
+            <th>{{ mean_nums }}</th>
+            <th>{{ var_nums }}</th>
+            <th>{{ sd_nums }}</th>
+        </tr>
+    </tbody>
+</table>
+{% if boxplot_nums %}
+{{ boxplot_nums|safe }}
+{% endif %}
+{% endblock %}
