@@ -1,0 +1,5 @@
+Django==1.10.3
+django-widget-tweaks==1.4.1
+numpy
+pandas
+plotly
